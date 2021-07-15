@@ -8,7 +8,7 @@
 import Foundation
 
 class GroupsAPIService {
-    func groupsListAPIRequest() {
+    func groupsListAPIRequest(complition: @escaping ([Group]) -> (Void) ) {
         var requestConstructor = URLComponents()
         requestConstructor.scheme = "https"
         requestConstructor.host = "api.vk.com"
@@ -24,8 +24,15 @@ class GroupsAPIService {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-           print("GROUPS = \(json!)")
+            do { let responseData = try JSONDecoder().decode(UserGroups.self, from: data)
+                let groupsList = responseData.response.items
+                DispatchQueue.main.async {
+                    complition(groupsList)
+                }
+                
+            } catch {
+                print(error)
+            }
         }
         task.resume()
     }

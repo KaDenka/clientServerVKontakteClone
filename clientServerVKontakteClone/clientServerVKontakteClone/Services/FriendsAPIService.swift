@@ -11,7 +11,7 @@ import Foundation
 
 class FriendsAPIService {
     
-    func friendsListAPIRequest() {
+    func friendsListAPIRequest(complition: @escaping ([Friend]) -> (Void)) {
         var requestConstructor = URLComponents()
         requestConstructor.scheme = "https"
         requestConstructor.host = "api.vk.com"
@@ -28,8 +28,14 @@ class FriendsAPIService {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-           print("FRIENDS = \(json!)")
+            do { let responseData = try JSONDecoder().decode(Friends.self, from: data)
+                let friendsList = responseData.response.items
+                DispatchQueue.main.async {
+                    complition(friendsList)
+                }
+            } catch {
+                print(error)
+            }
         }
         task.resume()
     }
