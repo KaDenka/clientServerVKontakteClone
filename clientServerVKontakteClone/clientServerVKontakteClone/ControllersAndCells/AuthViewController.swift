@@ -10,19 +10,12 @@ import WebKit
 
 class AuthViewController: UIViewController {
     
-    let friendsList = FriendsAPIService()
-    let photosList = PhotosAPIService()
-    let groupsList = GroupsAPIService()
-    let groupsSearchList = GroupsSearchAPIService()
-    
     @IBOutlet weak var authWebView: WKWebView! {
         didSet {
             authWebView.navigationDelegate = self
         }
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,13 +64,13 @@ extension AuthViewController: WKNavigationDelegate {
         Session.shared.userId = Int(authUserIdResponse)!
         
         //print("CONTROL RESPONSE DATA: token = \(Session.shared.token), userId = \(Session.shared.userId)")
-        
-        friendsList.friendsListAPIRequest()
-        photosList.photosListAPIRequest()
-        groupsList.groupsListAPIRequest()
-        groupsSearchList.groupsSearchListAPIRequest()
+    
+        logInToApp()
         
         decisionHandler(.cancel)
     }
     
+    func logInToApp() {
+        performSegue(withIdentifier: "fromWebToTabBarController", sender: nil)
+    }
 }
