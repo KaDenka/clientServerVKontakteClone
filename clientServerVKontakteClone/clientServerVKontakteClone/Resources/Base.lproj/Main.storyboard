@@ -231,24 +231,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UD0-4U-VPQ">
-                                <rect key="frame" x="20" y="159" width="374" height="654"/>
+                                <rect key="frame" x="20" y="158" width="374" height="655"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Searching group" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-8U-wnW">
-                                <rect key="frame" x="20" y="88" width="374" height="51"/>
+                                <rect key="frame" x="20" y="88" width="324" height="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIT-PY-Yt4">
+                                <rect key="frame" x="354" y="93" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="O90-HR-C6r"/>
+                                    <constraint firstAttribute="height" constant="40" id="PZy-az-uja"/>
+                                </constraints>
+                                <state key="normal" image="magnifyingglass.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="searchGroupsButton:" destination="pyK-k1-KDJ" eventType="touchUpInside" id="Qko-Kk-c36"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2JO-Vm-hXN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WIT-PY-Yt4" firstAttribute="top" secondItem="2JO-Vm-hXN" secondAttribute="top" constant="5" id="939-GJ-Odg"/>
                             <constraint firstItem="2JO-Vm-hXN" firstAttribute="trailing" secondItem="UD0-4U-VPQ" secondAttribute="trailing" constant="20" id="CtA-Kn-N9g"/>
                             <constraint firstItem="UD0-4U-VPQ" firstAttribute="bottom" secondItem="2JO-Vm-hXN" secondAttribute="bottom" id="LAz-3K-mvb"/>
+                            <constraint firstItem="WIT-PY-Yt4" firstAttribute="centerY" secondItem="2tB-8U-wnW" secondAttribute="centerY" id="S9w-wF-1ji"/>
+                            <constraint firstItem="WIT-PY-Yt4" firstAttribute="leading" secondItem="2tB-8U-wnW" secondAttribute="trailing" constant="10" id="UtU-zg-7gY"/>
                             <constraint firstItem="UD0-4U-VPQ" firstAttribute="top" secondItem="2tB-8U-wnW" secondAttribute="bottom" constant="20" id="VJe-ir-Jnt"/>
                             <constraint firstItem="UD0-4U-VPQ" firstAttribute="leading" secondItem="2JO-Vm-hXN" secondAttribute="leading" constant="20" id="ZgW-bY-dgb"/>
+                            <constraint firstItem="WIT-PY-Yt4" firstAttribute="trailing" secondItem="UD0-4U-VPQ" secondAttribute="trailing" id="aAm-5F-jQ8"/>
                             <constraint firstItem="2tB-8U-wnW" firstAttribute="top" secondItem="2JO-Vm-hXN" secondAttribute="top" id="mVL-pG-vaZ"/>
                             <constraint firstItem="2tB-8U-wnW" firstAttribute="leading" secondItem="2JO-Vm-hXN" secondAttribute="leading" constant="20" id="nMh-l5-szN"/>
-                            <constraint firstItem="2JO-Vm-hXN" firstAttribute="trailing" secondItem="2tB-8U-wnW" secondAttribute="trailing" constant="20" id="x7Y-MT-lOB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search Groups" id="gUz-MZ-5mA"/>

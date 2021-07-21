@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Friends: Codable {
     let response: Response
@@ -25,34 +26,16 @@ class Response: Codable {
     }
 }
 
-class Friend: Codable {
-    let firstName: String
-    let id: Int
-    let lastName: String
-    let canAccessClosed, isClosed: Bool
-    let photo50: String
-    let online: Int
-    let trackCode: String
+class Friend: Object, Codable {
+    @objc dynamic var firstName: String = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var lastName: String = ""
+    @objc dynamic var photo50: String = ""
 
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case id
         case lastName = "last_name"
-        case canAccessClosed = "can_access_closed"
-        case isClosed = "is_closed"
         case photo50 = "photo_50"
-        case online
-        case trackCode = "track_code"
-    }
-
-    init(firstName: String, id: Int, lastName: String, canAccessClosed: Bool, isClosed: Bool, photo50: String, online: Int, trackCode: String) {
-        self.firstName = firstName
-        self.id = id
-        self.lastName = lastName
-        self.canAccessClosed = canAccessClosed
-        self.isClosed = isClosed
-        self.photo50 = photo50
-        self.online = online
-        self.trackCode = trackCode
     }
 }
