@@ -41,4 +41,6 @@ class Group: Object, Codable {
         case photo100 = "photo_100"
         case photo200 = "photo_200"
     }
+    
+    override static func primaryKey() -> String? { return "id" }
 }
