@@ -36,6 +36,7 @@ class GroupsDataBase: DataBaseProtocol {
     func deleteData(model: Group) {
         groupsRealm.beginWrite()
         groupsRealm.delete(model)
+        try! groupsRealm.commitWrite()
         
     }
     

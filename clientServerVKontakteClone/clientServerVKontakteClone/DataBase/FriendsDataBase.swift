@@ -15,10 +15,14 @@ class FriendsDataBase: DataBaseProtocol {
     
     func addData(model: Friend) {
         
+      //  try! friendsRealm.safeWrite {
             friendsRealm.beginWrite()
             friendsRealm.add(model)
             try! friendsRealm.commitWrite()
-
+       // }
+        
+        
+        
     }
     
     func readData() -> [Friend] {
@@ -34,8 +38,13 @@ class FriendsDataBase: DataBaseProtocol {
     }
     
     func deleteData(model: Friend) {
-        friendsRealm.beginWrite()
-        friendsRealm.delete(model)
+        
+      //  try! friendsRealm.safeWrite {
+            friendsRealm.beginWrite()
+            friendsRealm.delete(model)
+            try! friendsRealm.commitWrite()
+       // }
+        
         
     }
     
