@@ -9,9 +9,10 @@ import Foundation
 
 class GroupsSearchAPIService {
     
-    var searchingName: String = "Toronto"
+    var searchingName: String = ""
     
-    func groupsSearchListAPIRequest( complition: @escaping ([SearchedGroup]) -> (Void)) {
+    func groupsSearchListAPIRequest(groupName: String, complition: @escaping ([SearchedGroup]) -> (Void)) {
+        searchingName = groupName
         var requestConstructor = URLComponents()
         requestConstructor.scheme = "https"
         requestConstructor.host = "api.vk.com"

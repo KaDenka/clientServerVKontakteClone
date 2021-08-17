@@ -12,7 +12,7 @@ class SearchGroupsViewController: UIViewController {
     let groupsSearchList = GroupsSearchAPIService()
     
     var groups = [SearchedGroup]()
-
+    
     @IBOutlet weak var groupsSearchBar: UISearchBar!
     
     @IBOutlet weak var searchGroupsTableView: UITableView! {
@@ -26,14 +26,18 @@ class SearchGroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        groupsSearchList.groupsSearchListAPIRequest { [weak self] item in
+    }
+    
+    @IBAction func searchGroupsButton(_ sender: UIButton) {
+        
+        groupsSearchList.groupsSearchListAPIRequest(groupName: self.groupsSearchBar.text ?? "") { [weak self] item in
             guard let self = self else { return }
             self.groups = item
             self.searchGroupsTableView.reloadData()
         }
-
+        self.groupsSearchBar.text = nil
     }
-
+    
 }
 
 extension SearchGroupsViewController: UITableViewDelegate, UITableViewDataSource {

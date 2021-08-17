@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5420605CB95AD19D132722B6 /* Pods_clientServerVKontakteClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */; };
 		CA1FB75C269AE8BF001AF136 /* FriendsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75B269AE8BF001AF136 /* FriendsAPIService.swift */; };
 		CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */; };
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
@@ -31,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324EB64A90DFC19BDB714F96 /* Pods-clientServerVKontakteClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.debug.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.debug.xcconfig"; sourceTree = "<group>"; };
+		4E7F416F00DC0E862F12BAC3 /* Pods-clientServerVKontakteClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.release.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.release.xcconfig"; sourceTree = "<group>"; };
+		AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clientServerVKontakteClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1FB75B269AE8BF001AF136 /* FriendsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
@@ -61,12 +65,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5420605CB95AD19D132722B6 /* Pods_clientServerVKontakteClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E11D1FC90BDA19D119F5A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				324EB64A90DFC19BDB714F96 /* Pods-clientServerVKontakteClone.debug.xcconfig */,
+				4E7F416F00DC0E862F12BAC3 /* Pods-clientServerVKontakteClone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93CB36ED0DF08AD9E1D1FE10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA1FB758269AD19A001AF136 /* ControllersAndCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +120,8 @@
 			children = (
 				CA923C6E269440D200D8169F /* clientServerVKontakteClone */,
 				CA923C6D269440D200D8169F /* Products */,
+				00E11D1FC90BDA19D119F5A9 /* Pods */,
+				93CB36ED0DF08AD9E1D1FE10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA923C80269440D400D8169F /* Build configuration list for PBXNativeTarget "clientServerVKontakteClone" */;
 			buildPhases = (
+				172E290D988E4398231D301C /* [CP] Check Pods Manifest.lock */,
 				CA923C68269440D200D8169F /* Sources */,
 				CA923C69269440D200D8169F /* Frameworks */,
 				CA923C6A269440D200D8169F /* Resources */,
+				6A906EB5A78564BCAC3912EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +235,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		172E290D988E4398231D301C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-clientServerVKontakteClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A906EB5A78564BCAC3912EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA923C68269440D200D8169F /* Sources */ = {
@@ -375,6 +444,7 @@
 		};
 		CA923C81269440D400D8169F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324EB64A90DFC19BDB714F96 /* Pods-clientServerVKontakteClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +464,7 @@
 		};
 		CA923C82269440D400D8169F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7F416F00DC0E862F12BAC3 /* Pods-clientServerVKontakteClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
