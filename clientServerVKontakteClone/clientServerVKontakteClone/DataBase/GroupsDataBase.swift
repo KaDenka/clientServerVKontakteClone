@@ -51,8 +51,8 @@ class GroupsDataBase: DataBaseProtocol {
                 addData(model: model)
             }
         }
-        guard let realmURL = groupsRealm.configuration.fileURL else { return print("NO ANY REALM URL")}
-        print("GROUPS REALM FILE: \(realmURL)")
+        //guard let realmURL = groupsRealm.configuration.fileURL else { return print("NO ANY REALM URL")}
+        //print("GROUPS REALM FILE: \(realmURL)")
     }
 }
 

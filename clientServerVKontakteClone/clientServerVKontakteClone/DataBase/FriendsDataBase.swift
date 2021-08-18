@@ -59,7 +59,7 @@ class FriendsDataBase: DataBaseProtocol {
                 addData(model: model)
             }
         }
-        guard let realmURL = friendsRealm.configuration.fileURL else { return print("NO ANY REALM URL")}
-        print("REALM FILE: \(realmURL)")
+        //guard let realmURL = friendsRealm.configuration.fileURL else { return print("NO ANY REALM URL")}
+        //print("REALM FILE: \(realmURL)")
     }
 }
