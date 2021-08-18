@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class FriendsViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class FriendsViewController: UIViewController {
     let friendsListRealmDataBase = FriendsDataBase()
     
     var friendsRealmToken: NotificationToken?
+    
+    let ref = Database.database().reference(withPath: "usersID")
     
     @IBOutlet weak var friendsTableView: UITableView! {
         didSet {
@@ -35,9 +38,14 @@ class FriendsViewController: UIViewController {
             self.friendsListRealmDataBase.checkDataAndRenew(array: items)
             self.friends = self.friendsListRealmDataBase.readData() as [Friend] //?? items
             self.friendsTableView.reloadData()
+            
+            self.firebaseLoadingData(users: items)
         }
         
-     // realmChangesTableViewReload()
+        
+        
+        
+        // realmChangesTableViewReload()
         
     }
     
@@ -87,5 +95,13 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
         
+    }
+    
+    func firebaseLoadingData(users: [Friend]) {
+        for user in users {
+            let userForFirebase = UserIDRealtimeFirebaseDataModel(userName: (user.lastName + user.firstName), userID: user.id)
+            let userRef = self.ref.child(userForFirebase.userName)
+            userRef.setValue(userForFirebase.toAnyObject())
+        }
     }
 }

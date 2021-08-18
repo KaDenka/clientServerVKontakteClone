@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class UserGroupsViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class UserGroupsViewController: UIViewController {
     let groupsListRealmDataBase = GroupsDataBase()
     
     var groupsRealmNotificationToken: NotificationToken?
+    
+    let ref = Database.database().reference(withPath: "usersGroups")
 
     @IBOutlet weak var userGroupsTableView: UITableView! {
         didSet {
@@ -35,6 +38,8 @@ class UserGroupsViewController: UIViewController {
             self.groupsListRealmDataBase.checkDataAndRenew(array: items)
             self.groups = self.groupsListRealmDataBase.readData() as [Group] //?? items
             self.userGroupsTableView.reloadData()
+            
+            self.firebaseLoadingData(users: items)
         }
         
      //   realmChangesTableViewReload()
@@ -88,5 +93,12 @@ extension UserGroupsViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func firebaseLoadingData(users: [Group]) {
+        for group in groups {
+            let groupForFirebase = GroupRealtimeFirebaseDataModel(groupName: group.name, groupID: group.id)
+            let groupRef = self.ref.child(groupForFirebase.groupName)
+            groupRef.setValue(groupForFirebase.toAnyObject())
+        }
+    }
     
 }
