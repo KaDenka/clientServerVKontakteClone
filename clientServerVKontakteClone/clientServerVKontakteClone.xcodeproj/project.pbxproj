@@ -11,6 +11,16 @@
 		CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */; };
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
+		CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584726A03521001F9041 /* MainTabBarController.swift */; };
+		CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584926A0355C001F9041 /* FriendsViewController.swift */; };
+		CA84584C26A0357A001F9041 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584B26A0357A001F9041 /* PhotosViewController.swift */; };
+		CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584D26A035A1001F9041 /* UserGroupsViewController.swift */; };
+		CA84585026A036AB001F9041 /* SearchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584F26A036AB001F9041 /* SearchGroupsViewController.swift */; };
+		CA84585326A042F8001F9041 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84585226A042F8001F9041 /* Friends.swift */; };
+		CA84585526A055BC001F9041 /* UserGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84585426A055BC001F9041 /* UserGroups.swift */; };
+		CA84585726A05C3D001F9041 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84585626A05C3D001F9041 /* Photos.swift */; };
+		CA84585926A05DC6001F9041 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84585826A05DC6001F9041 /* PhotoCell.swift */; };
+		CA84585B26A060E8001F9041 /* SearchingGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84585A26A060E8001F9041 /* SearchingGroups.swift */; };
 		CA923C70269440D200D8169F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA923C6F269440D200D8169F /* AppDelegate.swift */; };
 		CA923C72269440D200D8169F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA923C71269440D200D8169F /* SceneDelegate.swift */; };
 		CA923C74269440D200D8169F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA923C73269440D200D8169F /* AuthViewController.swift */; };
@@ -25,6 +35,16 @@
 		CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
+		CA84584726A03521001F9041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CA84584926A0355C001F9041 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		CA84584B26A0357A001F9041 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		CA84584D26A035A1001F9041 /* UserGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupsViewController.swift; sourceTree = "<group>"; };
+		CA84584F26A036AB001F9041 /* SearchGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupsViewController.swift; sourceTree = "<group>"; };
+		CA84585226A042F8001F9041 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		CA84585426A055BC001F9041 /* UserGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroups.swift; sourceTree = "<group>"; };
+		CA84585626A05C3D001F9041 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		CA84585826A05DC6001F9041 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CA84585A26A060E8001F9041 /* SearchingGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingGroups.swift; sourceTree = "<group>"; };
 		CA923C6C269440D200D8169F /* clientServerVKontakteClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientServerVKontakteClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA923C6F269440D200D8169F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA923C71269440D200D8169F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA1FB758269AD19A001AF136 /* Controllers */ = {
+		CA1FB758269AD19A001AF136 /* ControllersAndCells */ = {
 			isa = PBXGroup;
 			children = (
 				CA923C73269440D200D8169F /* AuthViewController.swift */,
+				CA84584726A03521001F9041 /* MainTabBarController.swift */,
+				CA84584926A0355C001F9041 /* FriendsViewController.swift */,
+				CA84584B26A0357A001F9041 /* PhotosViewController.swift */,
+				CA84584D26A035A1001F9041 /* UserGroupsViewController.swift */,
+				CA84584F26A036AB001F9041 /* SearchGroupsViewController.swift */,
+				CA84585826A05DC6001F9041 /* PhotoCell.swift */,
 			);
-			path = Controllers;
+			path = ControllersAndCells;
+			sourceTree = "<group>";
+		};
+		CA84585126A042DC001F9041 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA84585226A042F8001F9041 /* Friends.swift */,
+				CA84585426A055BC001F9041 /* UserGroups.swift */,
+				CA84585626A05C3D001F9041 /* Photos.swift */,
+				CA84585A26A060E8001F9041 /* SearchingGroups.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CA923C63269440D200D8169F = {
@@ -77,7 +114,8 @@
 				CA923C6F269440D200D8169F /* AppDelegate.swift */,
 				CA923C71269440D200D8169F /* SceneDelegate.swift */,
 				CA923C842694418700D8169F /* Services */,
-				CA1FB758269AD19A001AF136 /* Controllers */,
+				CA1FB758269AD19A001AF136 /* ControllersAndCells */,
+				CA84585126A042DC001F9041 /* Models */,
 				CA923C832694410600D8169F /* Resources */,
 			);
 			path = clientServerVKontakteClone;
@@ -177,11 +215,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */,
+				CA84585326A042F8001F9041 /* Friends.swift in Sources */,
+				CA84584C26A0357A001F9041 /* PhotosViewController.swift in Sources */,
 				CA923C86269441E100D8169F /* Session.swift in Sources */,
+				CA84585726A05C3D001F9041 /* Photos.swift in Sources */,
+				CA84585926A05DC6001F9041 /* PhotoCell.swift in Sources */,
+				CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */,
 				CA923C74269440D200D8169F /* AuthViewController.swift in Sources */,
 				CA923C70269440D200D8169F /* AppDelegate.swift in Sources */,
 				CA923C72269440D200D8169F /* SceneDelegate.swift in Sources */,
+				CA84585526A055BC001F9041 /* UserGroups.swift in Sources */,
+				CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */,
+				CA84585B26A060E8001F9041 /* SearchingGroups.swift in Sources */,
+				CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */,
 				CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */,
+				CA84585026A036AB001F9041 /* SearchGroupsViewController.swift in Sources */,
 				CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */,
 				CA1FB75C269AE8BF001AF136 /* FriendsAPIService.swift in Sources */,
 			);

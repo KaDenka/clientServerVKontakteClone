@@ -8,7 +8,7 @@
 import Foundation
 
 class PhotosAPIService {
-    func photosListAPIRequest() {
+    func photosListAPIRequest( complition: @escaping ([Photo]) -> (Void) ) {
         var requestConstructor = URLComponents()
         requestConstructor.scheme = "https"
         requestConstructor.host = "api.vk.com"
@@ -24,8 +24,14 @@ class PhotosAPIService {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
-            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-           print("PHOTOS = \(json!)")
+            do { let responseData = try JSONDecoder().decode(Photos.self, from: data)
+                let photoCollection = responseData.response.items
+                DispatchQueue.main.async {
+                    complition(photoCollection)
+                }
+            } catch {
+                print(error)
+            }
         }
         task.resume()
     }
