@@ -15,6 +15,7 @@
 		CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */; };
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
+		CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */; };
 		CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */; };
 		CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584726A03521001F9041 /* MainTabBarController.swift */; };
 		CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584926A0355C001F9041 /* FriendsViewController.swift */; };
@@ -33,6 +34,7 @@
 		CA923C79269440D400D8169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA923C78269440D400D8169F /* Assets.xcassets */; };
 		CA923C7C269440D400D8169F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA923C7A269440D400D8169F /* LaunchScreen.storyboard */; };
 		CA923C86269441E100D8169F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA923C85269441E100D8169F /* Session.swift */; };
+		CAA5D9A726B9C996002A2CBF /* RealtimeFirebaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA5D9A626B9C996002A2CBF /* RealtimeFirebaseDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,7 @@
 		CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
+		CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDataBase.swift; sourceTree = "<group>"; };
 		CA84584726A03521001F9041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CA84584926A0355C001F9041 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		CA923C7B269440D400D8169F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA923C7D269440D400D8169F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA923C85269441E100D8169F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CAA5D9A626B9C996002A2CBF /* RealtimeFirebaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeFirebaseDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				CA84585426A055BC001F9041 /* UserGroups.swift */,
 				CA84585626A05C3D001F9041 /* Photos.swift */,
 				CA84585A26A060E8001F9041 /* SearchingGroups.swift */,
+				CAA5D9A626B9C996002A2CBF /* RealtimeFirebaseDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				CA923C78269440D400D8169F /* Assets.xcassets */,
 				CA923C7A269440D400D8169F /* LaunchScreen.storyboard */,
 				CA923C7D269440D400D8169F /* Info.plist */,
+				CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA923C7C269440D400D8169F /* LaunchScreen.storyboard in Resources */,
+				CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */,
 				CA923C79269440D400D8169F /* Assets.xcassets in Resources */,
 				CA923C77269440D200D8169F /* Main.storyboard in Resources */,
 			);
@@ -327,6 +334,7 @@
 				CA84585B26A060E8001F9041 /* SearchingGroups.swift in Sources */,
 				CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */,
 				CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */,
+				CAA5D9A726B9C996002A2CBF /* RealtimeFirebaseDataModel.swift in Sources */,
 				CA148BA926B1E8A700648CFC /* DataBaseProtocol.swift in Sources */,
 				CA84585026A036AB001F9041 /* SearchGroupsViewController.swift in Sources */,
 				CA148BAE26B1ECFD00648CFC /* RealmSwiftExtension.swift in Sources */,
