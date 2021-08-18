@@ -38,4 +38,6 @@ class Friend: Object, Codable {
         case lastName = "last_name"
         case photo50 = "photo_50"
     }
+    
+    override static func primaryKey() -> String? { return "id"}
 }

@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsViewController: UIViewController {
     
     let friendsList = FriendsAPIService()
     
     var friends = [Friend]()
+    
+    let friendsListRealmDataBase = FriendsDataBase()
     
     @IBOutlet weak var friendsTableView: UITableView! {
         didSet {
@@ -27,7 +30,8 @@ class FriendsViewController: UIViewController {
         
         friendsList.friendsListAPIRequest { [weak self] items in
             guard let self = self else { return }
-            self.friends = items
+            self.friendsListRealmDataBase.checkDataAndRenew(array: items)
+            self.friends = self.friendsListRealmDataBase.readData() as [Friend] //?? items
             self.friendsTableView.reloadData()
         }
         

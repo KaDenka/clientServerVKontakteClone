@@ -12,6 +12,8 @@ class UserGroupsViewController: UIViewController {
     let groupsList = GroupsAPIService()
     
     var groups = [Group]()
+    
+    let groupsListRealmDataBase = GroupsDataBase()
 
     @IBOutlet weak var userGroupsTableView: UITableView! {
         didSet {
@@ -27,7 +29,8 @@ class UserGroupsViewController: UIViewController {
         
         groupsList.groupsListAPIRequest { [weak self] items in
             guard let self = self else { return }
-            self.groups = items
+            self.groupsListRealmDataBase.checkDataAndRenew(array: items)
+            self.groups = self.groupsListRealmDataBase.readData() as [Group] //?? items
             self.userGroupsTableView.reloadData()
         }
 
