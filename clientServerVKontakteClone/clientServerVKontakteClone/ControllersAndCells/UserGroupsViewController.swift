@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UserGroupsViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class UserGroupsViewController: UIViewController {
     var groups = [Group]()
     
     let groupsListRealmDataBase = GroupsDataBase()
+    
+    var groupsRealmNotificationToken: NotificationToken?
 
     @IBOutlet weak var userGroupsTableView: UITableView! {
         didSet {
@@ -33,6 +36,8 @@ class UserGroupsViewController: UIViewController {
             self.groups = self.groupsListRealmDataBase.readData() as [Group] //?? items
             self.userGroupsTableView.reloadData()
         }
+        
+     //   realmChangesTableViewReload()
 
     }
 
@@ -54,4 +59,34 @@ extension UserGroupsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func realmChangesTableViewReload() {
+        
+        let groupsRealmConfiguration = Realm.Configuration(schemaVersion: 1)
+        let groupsChangesRealm = try! Realm(configuration: groupsRealmConfiguration)
+        
+        let groups = groupsChangesRealm.objects(Friend.self)
+        
+        groupsRealmNotificationToken = groups.observe{ [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.userGroupsTableView else { return }
+            
+            switch changes {
+            case .initial:
+                tableView.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                
+                tableView.beginUpdates()
+                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+                tableView.endUpdates()
+            case .error(let error):
+                print(error.localizedDescription)
+            }
+            
+        }
+        
+    }
+    
+    
 }
