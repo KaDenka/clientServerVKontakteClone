@@ -16,6 +16,12 @@
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
 		CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */; };
+		CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */; };
+		CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */; };
+		CA49605426CEB0520036DDCB /* PostTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49605226CEB0520036DDCB /* PostTextTableViewCell.swift */; };
+		CA49605526CEB0520036DDCB /* PostTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */; };
+		CA49605826CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */; };
+		CA49605926CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */; };
 		CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */; };
 		CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584726A03521001F9041 /* MainTabBarController.swift */; };
 		CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584926A0355C001F9041 /* FriendsViewController.swift */; };
@@ -52,6 +58,12 @@
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
 		CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostTableViewCell.swift; sourceTree = "<group>"; };
+		CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPostTableViewCell.xib; sourceTree = "<group>"; };
+		CA49605226CEB0520036DDCB /* PostTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextTableViewCell.swift; sourceTree = "<group>"; };
+		CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTextTableViewCell.xib; sourceTree = "<group>"; };
+		CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsLikesTableViewCell.swift; sourceTree = "<group>"; };
+		CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsLikesTableViewCell.xib; sourceTree = "<group>"; };
 		CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDataBase.swift; sourceTree = "<group>"; };
 		CA84584726A03521001F9041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CA84584926A0355C001F9041 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CA923C6F269440D200D8169F /* AppDelegate.swift */,
+				CA93D2D826CDA2FE00043BEE /* NewsCells */,
 				CA1FB758269AD19A001AF136 /* ControllersAndCells */,
 				CA5CA54526B0714400DB9F03 /* DataBase */,
 				CA148BAC26B1ECCE00648CFC /* Extensions */,
@@ -209,6 +222,19 @@
 				CAD491BA26C0322F00AC4009 /* NewsAPIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CA93D2D826CDA2FE00043BEE /* NewsCells */ = {
+			isa = PBXGroup;
+			children = (
+				CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */,
+				CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */,
+				CA49605226CEB0520036DDCB /* PostTextTableViewCell.swift */,
+				CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */,
+				CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */,
+				CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */,
+			);
+			path = NewsCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA49605926CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib in Resources */,
+				CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */,
 				CA923C7C269440D400D8169F /* LaunchScreen.storyboard in Resources */,
+				CA49605526CEB0520036DDCB /* PostTextTableViewCell.xib in Resources */,
 				CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */,
 				CA923C79269440D400D8169F /* Assets.xcassets in Resources */,
 				CA923C77269440D200D8169F /* Main.storyboard in Resources */,
@@ -334,10 +363,13 @@
 				CA84585926A05DC6001F9041 /* PhotoCell.swift in Sources */,
 				CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */,
 				CAD491BB26C0322F00AC4009 /* NewsAPIService.swift in Sources */,
+				CA49605426CEB0520036DDCB /* PostTextTableViewCell.swift in Sources */,
 				CA923C74269440D200D8169F /* AuthViewController.swift in Sources */,
 				CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */,
 				CA923C70269440D200D8169F /* AppDelegate.swift in Sources */,
+				CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */,
 				CA923C72269440D200D8169F /* SceneDelegate.swift in Sources */,
+				CA49605826CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift in Sources */,
 				CA148BAB26B1EA7C00648CFC /* GroupsDataBase.swift in Sources */,
 				CA84585526A055BC001F9041 /* UserGroups.swift in Sources */,
 				CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */,
