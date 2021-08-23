@@ -16,8 +16,9 @@ class NewsAPIService {
         requestConstructor.path = "/method/newsfeed.get"
         requestConstructor.queryItems = [
             URLQueryItem(name: "user_id", value: "\(Session.shared.userId)"),
+            URLQueryItem(name: "filters", value: "post"),
             URLQueryItem(name: "access_token", value: "\(Session.shared.token)"),
-            URLQueryItem(name: "count", value: "30"),
+            URLQueryItem(name: "count", value: "50"),
             URLQueryItem(name: "v", value: "\(Session.shared.versionVK)")
         ]
         let request = URLRequest(url: requestConstructor.url!)
@@ -28,6 +29,7 @@ class NewsAPIService {
         let task = session.dataTask(with: request) { (data, response, error) in
             
             guard let data = data else {return}
+           
             do { let responseData = try JSONDecoder().decode(News.self, from: data)
                 let responseItems = responseData.response?.items
                 let profiles = responseData.response?.profiles
