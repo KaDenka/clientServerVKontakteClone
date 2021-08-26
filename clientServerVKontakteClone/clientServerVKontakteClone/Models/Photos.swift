@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
 
 
 class Photos: Codable {
@@ -27,11 +27,11 @@ class ItemsCollection: Codable {
     }
 }
 
-class Photo: Object, Codable {
-    @objc dynamic var albumID: Int = 0
-    @objc dynamic var date: Int = 0
-    @objc dynamic var id: Int = 0
-    @objc dynamic var ownerID: Int
+class Photo: /*Object,*/ Codable {
+    /*@objc dynamic */ var albumID: Int = 0
+    /*@objc dynamic */ var date: Int = 0
+    /*@objc dynamic */ var id: Int = 0
+    /*@objc dynamic */ var ownerID: Int
     var sizes: [Size]
 
     enum CodingKeys: String, CodingKey {
@@ -42,9 +42,9 @@ class Photo: Object, Codable {
     }
 }
 
-class Size: Object, Codable {
-    @objc dynamic var height: Int = 0
-    @objc dynamic var url: String = ""
-    @objc dynamic var type: String = ""
-    @objc dynamic var width: Int = 0
+class Size: /*Object,*/ Codable {
+    /*@objc dynamic */ var height: Int = 0
+    /*@objc dynamic */ var url: String = ""
+    /*@objc dynamic */ var type: String = ""
+    /*@objc dynamic */ var width: Int = 0
 }

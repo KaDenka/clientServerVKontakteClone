@@ -15,6 +15,7 @@
 		CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */; };
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
+		CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */; };
 		CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */; };
 		CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */; };
 		CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */; };
@@ -57,6 +58,7 @@
 		CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
+		CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsOperationAPIService.swift; sourceTree = "<group>"; };
 		CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostTableViewCell.swift; sourceTree = "<group>"; };
 		CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPostTableViewCell.xib; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */,
 				CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */,
 				CAD491BA26C0322F00AC4009 /* NewsAPIService.swift */,
+				CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				CAD491BB26C0322F00AC4009 /* NewsAPIService.swift in Sources */,
 				CA49605426CEB0520036DDCB /* PostTextTableViewCell.swift in Sources */,
 				CA923C74269440D200D8169F /* AuthViewController.swift in Sources */,
+				CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */,
 				CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */,
 				CA923C70269440D200D8169F /* AppDelegate.swift in Sources */,
 				CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */,

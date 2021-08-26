@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
 
 class SearchingGroups: Codable {
     let response: SearchResponse
@@ -28,13 +28,13 @@ class SearchResponse: Codable {
 }
 
 
-class SearchedGroup: Object, Codable {
-    @objc dynamic var id: Int = 0
-    @objc dynamic var name: String = ""
-    @objc dynamic var screenName: String = ""
-    @objc dynamic var photo50: String = ""
-    @objc dynamic var photo100: String = ""
-    @objc dynamic var photo200: String = ""
+class SearchedGroup: /*Object,*/Codable {
+    /*@objc dynamic */ var id: Int = 0
+    /*@objc dynamic */ var name: String = ""
+    /*@objc dynamic */ var screenName: String = ""
+    /*@objc dynamic */ var photo50: String = ""
+    /*@objc dynamic */ var photo100: String = ""
+    /*@objc dynamic */ var photo200: String = ""
     
     enum CodingKeys: String, CodingKey {
         case id, name
