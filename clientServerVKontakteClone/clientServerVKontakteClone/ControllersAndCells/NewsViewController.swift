@@ -27,9 +27,6 @@ class NewsViewController: UIViewController {
             newsTableView.register(infoPostNib, forCellReuseIdentifier: "infoPostCell")
             newsTableView.register(postTextNib, forCellReuseIdentifier: "postTextCell")
             newsTableView.register(commentsLikesNib, forCellReuseIdentifier: "commentsLikesCell")
-            
-            
-            
         }
     }
     
@@ -70,6 +67,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
