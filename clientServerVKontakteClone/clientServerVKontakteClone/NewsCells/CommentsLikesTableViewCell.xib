@@ -66,6 +66,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="commentsCount" destination="mFc-Xm-9Be" id="WXN-nZ-PXU"/>
                 <outlet property="commentsLabel" destination="kwl-lX-DWJ" id="VYq-3D-0Xl"/>
