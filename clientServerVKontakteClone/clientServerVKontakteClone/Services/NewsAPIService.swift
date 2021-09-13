@@ -9,7 +9,7 @@ import Foundation
 
 class NewsAPIService {
     
-    func newsAPIRequest(complition: @escaping ([ResponseItem], [Profile], [NewsGroup]) -> (Void)) {
+    func newsAPIRequest(startTime: TimeInterval? = nil, startFrom: String? = nil, _ complition: @escaping ([ResponseItem], [Profile], [NewsGroup]) -> (Void)) {
         DispatchQueue.global(qos: .userInteractive).async {
             var requestConstructor = URLComponents()
             requestConstructor.scheme = "https"
@@ -22,6 +22,7 @@ class NewsAPIService {
                 URLQueryItem(name: "count", value: "50"),
                 URLQueryItem(name: "v", value: "\(Session.shared.versionVK)")
             ]
+         
             let request = URLRequest(url: requestConstructor.url!)
             
             //print("NEWS REQUEST: \(request)")
