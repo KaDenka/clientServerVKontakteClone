@@ -9,5 +9,9 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var photoImage: UIImageView! {
+        didSet {
+            photoImage.backgroundColor = .white
+        }
+    }
 }

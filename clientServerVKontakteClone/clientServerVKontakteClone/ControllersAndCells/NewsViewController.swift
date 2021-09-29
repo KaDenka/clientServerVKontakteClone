@@ -8,7 +8,9 @@
 import UIKit
 
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, UITableViewDataSourcePrefetching {
+    
+    
     
     let newsList = NewsAPIService()
     
@@ -19,6 +21,12 @@ class NewsViewController: UIViewController {
     var news = [ResponseItem]()
     var newsUsers = [Profile]()
     var newsGroups = [NewsGroup]()
+    
+    var nextFrom = ""
+    var isLoading = false
+    
+    var expandedIndexSet: IndexSet = []
+    
     
     @IBOutlet weak var newsTableView: UITableView! {
         didSet {
@@ -34,6 +42,13 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newsTableView.prefetchDataSource = self
+        
+        self.newsTableView.refreshControl?.addTarget(self, action: #selector(refreshNews), for: .valueChanged)
+        
+        
+        
+        
         newsList.newsAPIRequest { [weak self] responseItems, profiles, newsGroups in
             
             guard let self = self else { return }
@@ -45,6 +60,10 @@ class NewsViewController: UIViewController {
             self.newsTableView.reloadData()
             
         }
+        
+    
+        
+        self.newsTableView.reloadData()
         
     }
     
@@ -147,6 +166,51 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard let maxSection = indexPaths.map({ $0.section }).max() else { return }
+        
+        
+        if maxSection > news.count - 5, !isLoading {
+            
+            isLoading = true
+            
+            newsList.newsAPIRequest(startFrom: nextFrom) { [weak self] newsItems, usersItems, groupsItems in
+                
+                guard let self = self else { return }
+                
+                let indexSet = IndexSet(integersIn: self.news.count..<self.news.count + newsItems.count)
+                
+                self.news.append(contentsOf: newsItems)
+                self.newsUsers.append(contentsOf: usersItems)
+                self.newsGroups.append(contentsOf: groupsItems)
+                
+                self.newsTableView.insertSections(indexSet, with: .automatic)
+                
+                self.isLoading = false
+            }
+        }
+    }
+    
+    @objc func refreshNews(sender: AnyObject) {
+        self.newsTableView.refreshControl?.beginRefreshing()
+        
+        let mostRecentFeedItemDate = self.news.first?.date ?? Date().timeIntervalSince1970
+        
+        newsList.newsAPIRequest(startTime: mostRecentFeedItemDate + 1){ [weak self] newsItems, usersItems, groupsItems in
+            
+            guard let self = self else { return }
+            
+            self.newsTableView.refreshControl?.endRefreshing()
+            self.news = newsItems + self.news
+            self.newsUsers = usersItems + self.newsUsers
+            self.newsGroups = groupsItems + self.newsGroups
+            let indexSet = IndexSet(integersIn: 0..<newsItems.count)
+            self.newsTableView.insertSections(indexSet, with: .fade)
+        }
+    }
+    
 }
 
 
@@ -162,5 +226,8 @@ func convertDate(date: TimeInterval) -> String {
     
     return dateString
 }
+
+
+
 
 

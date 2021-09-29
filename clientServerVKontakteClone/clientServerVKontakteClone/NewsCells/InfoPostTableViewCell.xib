@@ -56,6 +56,7 @@
                     <constraint firstItem="Aui-Jj-TYg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w7X-Ol-DDW"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateInfoLabel" destination="F4X-19-fof" id="aeI-Ic-79k"/>
                 <outlet property="userAvatarImage" destination="UE8-7Z-tBp" id="Pde-aa-WvJ"/>

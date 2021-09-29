@@ -82,7 +82,11 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         if let url = URL(string: friend.photo50) {
             let data = try? Data(contentsOf: url)
             let image = UIImage(data: data!)
-            cell.imageView?.image = image
+            if let imageView = cell.imageView {
+                imageView.image = image
+                imageView.layer.cornerRadius = (imageView.image?.size.height)! / 2.25
+                imageView.clipsToBounds = true
+            }
         }
         
         
