@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5420605CB95AD19D132722B6 /* Pods_clientServerVKontakteClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */; };
+		CA040BEC27049DA200341B45 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA040BEB27049DA200341B45 /* UIColorExtension.swift */; };
 		CA148BA926B1E8A700648CFC /* DataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BA826B1E8A700648CFC /* DataBaseProtocol.swift */; };
 		CA148BAB26B1EA7C00648CFC /* GroupsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BAA26B1EA7C00648CFC /* GroupsDataBase.swift */; };
 		CA148BAE26B1ECFD00648CFC /* RealmSwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */; };
@@ -56,6 +57,7 @@
 		324EB64A90DFC19BDB714F96 /* Pods-clientServerVKontakteClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.debug.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.debug.xcconfig"; sourceTree = "<group>"; };
 		4E7F416F00DC0E862F12BAC3 /* Pods-clientServerVKontakteClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.release.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.release.xcconfig"; sourceTree = "<group>"; };
 		AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clientServerVKontakteClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA040BEB27049DA200341B45 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CA148BA826B1E8A700648CFC /* DataBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
 		CA148BAA26B1EA7C00648CFC /* GroupsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDataBase.swift; sourceTree = "<group>"; };
 		CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftExtension.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */,
+				CA040BEB27049DA200341B45 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				CA84585526A055BC001F9041 /* UserGroups.swift in Sources */,
 				CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */,
 				CA84585B26A060E8001F9041 /* SearchingGroups.swift in Sources */,
+				CA040BEC27049DA200341B45 /* UIColorExtension.swift in Sources */,
 				CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */,
 				CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */,
 				CAD491BD26C0326900AC4009 /* News.swift in Sources */,
