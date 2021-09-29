@@ -24,6 +24,6 @@ class VideoTableViewCell: UITableViewCell {
 }
 
 func playVideo(url: URL) {
-    let player = AVPlayer(url: url)
+   // let player = AVPlayer(url: url)
     
 }

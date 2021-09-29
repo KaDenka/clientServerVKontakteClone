@@ -9,11 +9,23 @@ import UIKit
 
 class InfoPostTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var userAvatarImage: UIImageView!
+    @IBOutlet weak var userAvatarImage: UIImageView! {
+        didSet {
+            userAvatarImage.backgroundColor = .white
+        }
+    }
     
-    @IBOutlet weak var userInfoLabel: UILabel!
+    @IBOutlet weak var userInfoLabel: UILabel! {
+        didSet {
+            userInfoLabel.backgroundColor = .white
+        }
+    }
     
-    @IBOutlet weak var dateInfoLabel: UILabel!
+    @IBOutlet weak var dateInfoLabel: UILabel! {
+        didSet {
+            dateInfoLabel.backgroundColor = .white
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

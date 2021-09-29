@@ -10,11 +10,23 @@ import UIKit
 class CommentsLikesTableViewCell: UITableViewCell {
     @IBOutlet weak var likesImage: UIImageView!
     
-    @IBOutlet weak var likesCount: UILabel!
+    @IBOutlet weak var likesCount: UILabel! {
+        didSet {
+            likesCount.backgroundColor = .white
+        }
+    }
     
-    @IBOutlet weak var commentsCount: UILabel!
+    @IBOutlet weak var commentsCount: UILabel! {
+        didSet {
+            commentsCount.backgroundColor = .white
+        }
+    }
     
-    @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var commentsLabel: UILabel! {
+        didSet {
+            commentsLabel.backgroundColor = .white
+        }
+    }
     
     
     
