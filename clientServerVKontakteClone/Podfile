@@ -7,7 +7,7 @@ target 'clientServerVKontakteClone' do
 
   # Pods for clientServerVKontakteClone
 
-pod 'RealmSwift'
+# pod 'RealmSwift'
 
 pod 'Firebase/Auth'
 
