@@ -15,6 +15,7 @@
 		CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */; };
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
+		CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */; };
 		CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */; };
 		CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */; };
 		CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */; };
@@ -22,6 +23,11 @@
 		CA49605526CEB0520036DDCB /* PostTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */; };
 		CA49605826CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */; };
 		CA49605926CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */; };
+		CA5701D226DB5DE100E639D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5701D126DB5DE100E639D5 /* UserViewController.swift */; };
+		CA5701D426DB60AA00E639D5 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5701D326DB60AA00E639D5 /* UserAPIService.swift */; };
+		CA5701D626DB61E900E639D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5701D526DB61E900E639D5 /* User.swift */; };
+		CA5701D926DC00B000E639D5 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5701D726DC00B000E639D5 /* VideoTableViewCell.swift */; };
+		CA5701DA26DC00B000E639D5 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5701D826DC00B000E639D5 /* VideoTableViewCell.xib */; };
 		CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */; };
 		CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584726A03521001F9041 /* MainTabBarController.swift */; };
 		CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584926A0355C001F9041 /* FriendsViewController.swift */; };
@@ -57,6 +63,7 @@
 		CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPIService.swift; sourceTree = "<group>"; };
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
+		CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsOperationAPIService.swift; sourceTree = "<group>"; };
 		CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostTableViewCell.swift; sourceTree = "<group>"; };
 		CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPostTableViewCell.xib; sourceTree = "<group>"; };
@@ -64,6 +71,11 @@
 		CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTextTableViewCell.xib; sourceTree = "<group>"; };
 		CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsLikesTableViewCell.swift; sourceTree = "<group>"; };
 		CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsLikesTableViewCell.xib; sourceTree = "<group>"; };
+		CA5701D126DB5DE100E639D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CA5701D326DB60AA00E639D5 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
+		CA5701D526DB61E900E639D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA5701D726DC00B000E639D5 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		CA5701D826DC00B000E639D5 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDataBase.swift; sourceTree = "<group>"; };
 		CA84584726A03521001F9041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CA84584926A0355C001F9041 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +150,7 @@
 				CA84584F26A036AB001F9041 /* SearchGroupsViewController.swift */,
 				CA84585826A05DC6001F9041 /* PhotoCell.swift */,
 				CAD491BE26C0343700AC4009 /* NewsViewController.swift */,
+				CA5701D126DB5DE100E639D5 /* UserViewController.swift */,
 			);
 			path = ControllersAndCells;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 				CA84585A26A060E8001F9041 /* SearchingGroups.swift */,
 				CAA5D9A626B9C996002A2CBF /* RealtimeFirebaseDataModel.swift */,
 				CAD491BC26C0326900AC4009 /* News.swift */,
+				CA5701D526DB61E900E639D5 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +234,8 @@
 				CA1FB75D269AE91B001AF136 /* GroupsAPIService.swift */,
 				CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */,
 				CAD491BA26C0322F00AC4009 /* NewsAPIService.swift */,
+				CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */,
+				CA5701D326DB60AA00E639D5 /* UserAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +249,8 @@
 				CA49605326CEB0520036DDCB /* PostTextTableViewCell.xib */,
 				CA49605626CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift */,
 				CA49605726CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib */,
+				CA5701D726DC00B000E639D5 /* VideoTableViewCell.swift */,
+				CA5701D826DC00B000E639D5 /* VideoTableViewCell.xib */,
 			);
 			path = NewsCells;
 			sourceTree = "<group>";
@@ -297,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA49605926CEBB6B0036DDCB /* CommentsLikesTableViewCell.xib in Resources */,
+				CA5701DA26DC00B000E639D5 /* VideoTableViewCell.xib in Resources */,
 				CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */,
 				CA923C7C269440D400D8169F /* LaunchScreen.storyboard in Resources */,
 				CA49605526CEB0520036DDCB /* PostTextTableViewCell.xib in Resources */,
@@ -365,11 +384,14 @@
 				CAD491BB26C0322F00AC4009 /* NewsAPIService.swift in Sources */,
 				CA49605426CEB0520036DDCB /* PostTextTableViewCell.swift in Sources */,
 				CA923C74269440D200D8169F /* AuthViewController.swift in Sources */,
+				CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */,
 				CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */,
 				CA923C70269440D200D8169F /* AppDelegate.swift in Sources */,
 				CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */,
 				CA923C72269440D200D8169F /* SceneDelegate.swift in Sources */,
+				CA5701D226DB5DE100E639D5 /* UserViewController.swift in Sources */,
 				CA49605826CEBB6B0036DDCB /* CommentsLikesTableViewCell.swift in Sources */,
+				CA5701D926DC00B000E639D5 /* VideoTableViewCell.swift in Sources */,
 				CA148BAB26B1EA7C00648CFC /* GroupsDataBase.swift in Sources */,
 				CA84585526A055BC001F9041 /* UserGroups.swift in Sources */,
 				CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */,
@@ -378,11 +400,13 @@
 				CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */,
 				CAD491BD26C0326900AC4009 /* News.swift in Sources */,
 				CAD491BF26C0343700AC4009 /* NewsViewController.swift in Sources */,
+				CA5701D426DB60AA00E639D5 /* UserAPIService.swift in Sources */,
 				CAA5D9A726B9C996002A2CBF /* RealtimeFirebaseDataModel.swift in Sources */,
 				CA148BA926B1E8A700648CFC /* DataBaseProtocol.swift in Sources */,
 				CA84585026A036AB001F9041 /* SearchGroupsViewController.swift in Sources */,
 				CA148BAE26B1ECFD00648CFC /* RealmSwiftExtension.swift in Sources */,
 				CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */,
+				CA5701D626DB61E900E639D5 /* User.swift in Sources */,
 				CA1FB75C269AE8BF001AF136 /* FriendsAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -55,6 +55,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="cnL-C4-x1D" kind="relationship" relationship="viewControllers" id="19I-cs-ZiX"/>
                         <segue destination="a2K-S5-Llr" kind="relationship" relationship="viewControllers" id="TPI-9k-yUM"/>
                         <segue destination="r7P-dS-Q4K" kind="relationship" relationship="viewControllers" id="4eP-gH-3Vv"/>
                         <segue destination="08L-Mi-ytz" kind="relationship" relationship="viewControllers" id="Vk2-7H-mtr"/>
@@ -70,7 +71,7 @@
         <scene sceneID="ozc-yG-uTl">
             <objects>
                 <navigationController id="a2K-S5-Llr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" image="person" catalog="system" selectedImage="person.fill" id="jiN-be-2oQ"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.2" catalog="system" selectedImage="person.2.fill" id="jiN-be-2oQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bqo-pY-lTF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,6 +83,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNo-QF-bUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1722" y="-623"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="6Cc-N5-Nj7">
+            <objects>
+                <navigationController id="cnL-C4-x1D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person" catalog="system" selectedImage="person.fill" id="gy6-y8-lVi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fB-a6-4fn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z2L-ev-1Ih" kind="relationship" relationship="rootViewController" id="j3O-k9-ejB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9X-Se-pCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-1351"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="j9D-Gb-0kZ">
+            <objects>
+                <viewController id="z2L-ev-1Ih" customClass="UserViewController" customModule="clientServerVKontakteClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uxb-q2-g04">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7WB-2s-gsD">
+                                <rect key="frame" x="87" y="168" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VI0-47-y47"/>
+                                    <constraint firstAttribute="height" constant="240" id="o0M-6w-srJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPM-qQ-uDf">
+                                <rect key="frame" x="87" y="488" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EoA-Xv-U7P"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="FR7-RF-o8a"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="cpj-gG-zeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0uU-lG-LuI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7WB-2s-gsD" firstAttribute="top" secondItem="0uU-lG-LuI" secondAttribute="top" constant="80" id="7zX-u9-DwG"/>
+                            <constraint firstItem="DPM-qQ-uDf" firstAttribute="leading" secondItem="7WB-2s-gsD" secondAttribute="leading" id="Auy-dL-d9J"/>
+                            <constraint firstItem="DPM-qQ-uDf" firstAttribute="top" secondItem="7WB-2s-gsD" secondAttribute="bottom" constant="80" id="Efp-I3-chw"/>
+                            <constraint firstItem="0uU-lG-LuI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DPM-qQ-uDf" secondAttribute="trailing" symbolic="YES" id="YlW-yl-wjN"/>
+                            <constraint firstItem="7WB-2s-gsD" firstAttribute="centerX" secondItem="Uxb-q2-g04" secondAttribute="centerX" id="lfU-kT-y53"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="User" id="1g7-ag-iDy"/>
+                    <connections>
+                        <outlet property="userProfileImage" destination="7WB-2s-gsD" id="ZvW-C1-Ca3"/>
+                        <outlet property="userProfileNameLabel" destination="DPM-qQ-uDf" id="Ncp-H2-YlT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYs-6v-C0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469.5652173913045" y="-1351.3392857142856"/>
         </scene>
         <!--Friends-->
         <scene sceneID="He7-a7-2I7">
@@ -365,6 +430,8 @@
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

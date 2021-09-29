@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 import Firebase
 
 class FriendsViewController: UIViewController {
@@ -15,9 +15,9 @@ class FriendsViewController: UIViewController {
     
     var friends = [Friend]()
     
-    let friendsListRealmDataBase = FriendsDataBase()
+    //let friendsListRealmDataBase = FriendsDataBase()
     
-    var friendsRealmToken: NotificationToken?
+   // var friendsRealmToken: NotificationToken?
     
     let ref = Database.database().reference(withPath: "usersID")
     
@@ -33,19 +33,37 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        friendsList.friendsListAPIRequest { [weak self] items in
-            guard let self = self else { return }
-            self.friendsListRealmDataBase.checkDataAndRenew(array: items)
-            self.friends = self.friendsListRealmDataBase.readData() as [Friend] //?? items
-            self.friendsTableView.reloadData()
-            
-            self.firebaseLoadingData(users: items)
-        }
+        
+// MARK: - The loading table view data way 1 (normal)
+        
+//        friendsList.friendsListAPIRequest { [weak self] items in
+//            guard let self = self else { return }
+//            self.friends = items
+//
+//            //self.friendsListRealmDataBase.checkDataAndRenew(array: items)
+//           // self.friends = self.friendsListRealmDataBase.readData() as [Friend] //?? items
+//
+//            self.friendsTableView.reloadData()
+//
+//           // self.firebaseLoadingData(users: items)
+//        }
+//        // realmChangesTableViewReload()
+//
         
         
+// MARK: - The loading table view data way 2 (through Operation)
         
+        let operationsQueue = OperationQueue()
         
-        // realmChangesTableViewReload()
+        let friendsMakeAPIDataOperation = FriendsMakeAPIDataOperation()
+        let friendsParsingOperation = FriendsParsingOperation()
+        let friendsDiaplayOperation = FriendsDiaplayOperation(controller: self)
+        
+        operationsQueue.addOperation(friendsMakeAPIDataOperation)
+        friendsParsingOperation.addDependency(friendsMakeAPIDataOperation)
+        operationsQueue.addOperation(friendsParsingOperation)
+        friendsDiaplayOperation.addDependency(friendsParsingOperation)
+        OperationQueue.main.addOperation(friendsDiaplayOperation)
         
     }
     
@@ -66,42 +84,45 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
             let image = UIImage(data: data!)
             cell.imageView?.image = image
         }
+        
+        
+        
         return cell
     }
     
-    func realmChangesTableViewReload() {
-        
-        let friendsRealmConfiguration = Realm.Configuration(schemaVersion: 3)
-        let friendsChangesRealm = try! Realm(configuration: friendsRealmConfiguration)
-        
-        let friends = friendsChangesRealm.objects(Friend.self)
-        
-        friendsRealmToken = friends.observe{ [weak self] (changes: RealmCollectionChange) in
-            guard let tableView = self?.friendsTableView else { return }
-            
-            switch changes {
-            case .initial:
-                tableView.reloadData()
-            case .update(_, let deletions, let insertions, let modifications):
-                
-                tableView.beginUpdates()
-                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
-                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
-                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
-                tableView.endUpdates()
-            case .error(let error):
-                print(error.localizedDescription)
-            }
-            
-        }
-        
-    }
+//    func realmChangesTableViewReload() {
+//        
+//        let friendsRealmConfiguration = Realm.Configuration(schemaVersion: 3)
+//        let friendsChangesRealm = try! Realm(configuration: friendsRealmConfiguration)
+//        
+//        let friends = friendsChangesRealm.objects(Friend.self)
+//        
+//        friendsRealmToken = friends.observe{ [weak self] (changes: RealmCollectionChange) in
+//            guard let tableView = self?.friendsTableView else { return }
+//            
+//            switch changes {
+//            case .initial:
+//                tableView.reloadData()
+//            case .update(_, let deletions, let insertions, let modifications):
+//                
+//                tableView.beginUpdates()
+//                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+//                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+//                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }), with: .automatic)
+//                tableView.endUpdates()
+//            case .error(let error):
+//                print(error.localizedDescription)
+//            }
+//            
+//        }
+//        
+//    }
     
-    func firebaseLoadingData(users: [Friend]) {
-        for user in users {
-            let userForFirebase = UserIDRealtimeFirebaseDataModel(userName: (user.lastName + user.firstName), userID: user.id)
-            let userRef = self.ref.child(userForFirebase.userName)
-            userRef.setValue(userForFirebase.toAnyObject())
-        }
-    }
+//    func firebaseLoadingData(users: [Friend]) {
+//        for user in users {
+//            let userForFirebase = UserIDRealtimeFirebaseDataModel(userName: (user.lastName + user.firstName), userID: user.id)
+//            let userRef = self.ref.child(userForFirebase.userName)
+//            userRef.setValue(userForFirebase.toAnyObject())
+//        }
+//    }
 }
