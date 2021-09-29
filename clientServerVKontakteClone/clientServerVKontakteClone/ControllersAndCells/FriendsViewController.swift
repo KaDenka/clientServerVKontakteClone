@@ -33,6 +33,7 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
 // MARK: - The loading table view data way 1 (normal)
         
 //        friendsList.friendsListAPIRequest { [weak self] items in
@@ -83,6 +84,9 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
             let image = UIImage(data: data!)
             cell.imageView?.image = image
         }
+        
+        
+        
         return cell
     }
     
