@@ -7,19 +7,21 @@
 
 import UIKit
 //import RealmSwift
-import Firebase
+//import Firebase
 
 class FriendsViewController: UIViewController {
     
-    let friendsList = FriendsAPIService()
+    //let friendsList = FriendsAPIService()
     
     var friends = [Friend]()
+    
+    let friendsAdapter = FriendsAdapter()
     
     //let friendsListRealmDataBase = FriendsDataBase()
     
    // var friendsRealmToken: NotificationToken?
     
-    let ref = Database.database().reference(withPath: "usersID")
+   // let ref = Database.database().reference(withPath: "usersID")
     
     @IBOutlet weak var friendsTableView: UITableView! {
         didSet {
@@ -29,9 +31,14 @@ class FriendsViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+       
+    }
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
+        
         
         
 // MARK: - The loading table view data way 1 (normal)
@@ -53,17 +60,24 @@ class FriendsViewController: UIViewController {
         
 // MARK: - The loading table view data way 2 (through Operation)
         
-        let operationsQueue = OperationQueue()
-        
-        let friendsMakeAPIDataOperation = FriendsMakeAPIDataOperation()
-        let friendsParsingOperation = FriendsParsingOperation()
-        let friendsDiaplayOperation = FriendsDiaplayOperation(controller: self)
-        
-        operationsQueue.addOperation(friendsMakeAPIDataOperation)
-        friendsParsingOperation.addDependency(friendsMakeAPIDataOperation)
-        operationsQueue.addOperation(friendsParsingOperation)
-        friendsDiaplayOperation.addDependency(friendsParsingOperation)
-        OperationQueue.main.addOperation(friendsDiaplayOperation)
+//        let operationsQueue = OperationQueue()
+//
+//        let friendsMakeAPIDataOperation = FriendsMakeAPIDataOperation()
+//        let friendsParsingOperation = FriendsParsingOperation()
+//        let friendsDiaplayOperation = FriendsDiaplayOperation(controller: self)
+//
+//        operationsQueue.addOperation(friendsMakeAPIDataOperation)
+//        friendsParsingOperation.addDependency(friendsMakeAPIDataOperation)
+//        operationsQueue.addOperation(friendsParsingOperation)
+//        friendsDiaplayOperation.addDependency(friendsParsingOperation)
+//        OperationQueue.main.addOperation(friendsDiaplayOperation)
+//
+// MARK: - The loading data via Adapter
+        friendsAdapter.getFriendsList { [weak self] receivedFriends in
+            guard let self = self else { return }
+            self.friends = receivedFriends
+            self.friendsTableView.reloadData()
+        }
         
     }
     

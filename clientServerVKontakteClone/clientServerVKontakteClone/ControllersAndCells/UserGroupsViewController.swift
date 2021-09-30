@@ -7,7 +7,7 @@
 
 import UIKit
 //import RealmSwift
-import Firebase
+//import Firebase
 import PromiseKit
 import Alamofire
 
@@ -22,7 +22,7 @@ class UserGroupsViewController: UIViewController {
     
     // var groupsRealmNotificationToken: NotificationToken?
     
-    let ref = Database.database().reference(withPath: "usersGroups")
+    //let ref = Database.database().reference(withPath: "usersGroups")
     
     @IBOutlet weak var userGroupsTableView: UITableView! {
         didSet {
