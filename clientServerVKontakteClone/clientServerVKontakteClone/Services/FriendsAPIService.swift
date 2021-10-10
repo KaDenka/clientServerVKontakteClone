@@ -11,7 +11,7 @@ import Foundation
 
 class FriendsAPIService {
     
-    func friendsListAPIRequest(complition: @escaping ([Friend]) -> (Void)) {
+    func friendsListAPIRequest(completion: @escaping ([Friend]) -> (Void)) {
         DispatchQueue.global().async {
             var requestConstructor = URLComponents()
             requestConstructor.scheme = "https"
@@ -32,7 +32,7 @@ class FriendsAPIService {
                 do { let responseData = try JSONDecoder().decode(Friends.self, from: data)
                     let friendsList = responseData.response.items
                     DispatchQueue.main.async {
-                        complition(friendsList)
+                        completion(friendsList)
                     }
                 } catch {
                     print(error)

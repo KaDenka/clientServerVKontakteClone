@@ -9,7 +9,7 @@ import UIKit
 //import RealmSwift
 //import Firebase
 import PromiseKit
-import Alamofire
+//import Alamofire
 
 
 class UserGroupsViewController: UIViewController {

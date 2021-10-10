@@ -13,12 +13,12 @@ class FriendsAdapter {
     
     private var friendsList = [Friend]()
     
-    func getFriendsList(completion: ([Friend]) -> Void) {
-        friendAPI.friendsListAPIRequest { [weak self] friends in
-            guard let self = self else { return }
-            self.friendsList = friends
+    func getFriendsList(completion: @escaping ([Friend]) -> (Void)) {
+        friendAPI.friendsListAPIRequest { /*[weak self]*/ friends in
+           // guard let self = self else { return }
+           // self.friendsList = friends
+            completion(friends)
         }
-        
-        completion(friendsList)
+        //completion(friendsList)
     }
 }

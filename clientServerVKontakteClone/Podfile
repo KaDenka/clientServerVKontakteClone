@@ -15,9 +15,9 @@ target 'clientServerVKontakteClone' do
 
 pod 'PromiseKit'
 
-pod 'Alamofire'
+# pod 'Alamofire'
 
-pod 'SwiftyJSON'
+# pod 'SwiftyJSON'
 
 # pod 'Firebase/Core'
 
