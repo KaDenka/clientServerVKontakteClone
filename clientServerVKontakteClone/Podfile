@@ -9,13 +9,15 @@ target 'clientServerVKontakteClone' do
 
 # pod 'RealmSwift'
 
-pod 'Firebase/Auth'
+# pod 'Firebase/Auth'
 
-pod 'Firebase/Database'
+# pod 'Firebase/Database'
 
 pod 'PromiseKit'
 
-pod 'Alamofire'
+# pod 'Alamofire'
+
+# pod 'SwiftyJSON'
 
 # pod 'Firebase/Core'
 

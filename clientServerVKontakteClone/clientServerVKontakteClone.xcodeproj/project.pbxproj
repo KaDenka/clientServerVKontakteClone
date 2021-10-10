@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5420605CB95AD19D132722B6 /* Pods_clientServerVKontakteClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */; };
+		CA040BEC27049DA200341B45 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA040BEB27049DA200341B45 /* UIColorExtension.swift */; };
+		CA040BEF2705C96E00341B45 /* FriendsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA040BEE2705C96E00341B45 /* FriendsAdapter.swift */; };
 		CA148BA926B1E8A700648CFC /* DataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BA826B1E8A700648CFC /* DataBaseProtocol.swift */; };
 		CA148BAB26B1EA7C00648CFC /* GroupsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BAA26B1EA7C00648CFC /* GroupsDataBase.swift */; };
 		CA148BAE26B1ECFD00648CFC /* RealmSwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */; };
@@ -29,6 +31,8 @@
 		CA5701D926DC00B000E639D5 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5701D726DC00B000E639D5 /* VideoTableViewCell.swift */; };
 		CA5701DA26DC00B000E639D5 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5701D826DC00B000E639D5 /* VideoTableViewCell.xib */; };
 		CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */; };
+		CA6BAD672712DD480025E2DF /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6BAD662712DD480025E2DF /* FriendViewModel.swift */; };
+		CA6BAD692712DE050025E2DF /* FriendViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6BAD682712DE050025E2DF /* FriendViewModelFactory.swift */; };
 		CA84584826A03521001F9041 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584726A03521001F9041 /* MainTabBarController.swift */; };
 		CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584926A0355C001F9041 /* FriendsViewController.swift */; };
 		CA84584C26A0357A001F9041 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84584B26A0357A001F9041 /* PhotosViewController.swift */; };
@@ -56,6 +60,8 @@
 		324EB64A90DFC19BDB714F96 /* Pods-clientServerVKontakteClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.debug.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.debug.xcconfig"; sourceTree = "<group>"; };
 		4E7F416F00DC0E862F12BAC3 /* Pods-clientServerVKontakteClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientServerVKontakteClone.release.xcconfig"; path = "Target Support Files/Pods-clientServerVKontakteClone/Pods-clientServerVKontakteClone.release.xcconfig"; sourceTree = "<group>"; };
 		AB6BF4B6B75F83E70C6FD357 /* Pods_clientServerVKontakteClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clientServerVKontakteClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA040BEB27049DA200341B45 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CA040BEE2705C96E00341B45 /* FriendsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAdapter.swift; sourceTree = "<group>"; };
 		CA148BA826B1E8A700648CFC /* DataBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
 		CA148BAA26B1EA7C00648CFC /* GroupsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDataBase.swift; sourceTree = "<group>"; };
 		CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftExtension.swift; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 		CA5701D726DC00B000E639D5 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		CA5701D826DC00B000E639D5 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		CA5CA54826B0720B00DB9F03 /* FriendsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDataBase.swift; sourceTree = "<group>"; };
+		CA6BAD662712DD480025E2DF /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		CA6BAD682712DE050025E2DF /* FriendViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModelFactory.swift; sourceTree = "<group>"; };
 		CA84584726A03521001F9041 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CA84584926A0355C001F9041 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CA84584B26A0357A001F9041 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -131,10 +139,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA040BED2705C8BE00341B45 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				CA040BEE2705C96E00341B45 /* FriendsAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		CA148BAC26B1ECCE00648CFC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				CA148BAD26B1ECFD00648CFC /* RealmSwiftExtension.swift */,
+				CA040BEB27049DA200341B45 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +180,15 @@
 				CA148BAA26B1EA7C00648CFC /* GroupsDataBase.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		CA6BAD652712DD020025E2DF /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CA6BAD662712DD480025E2DF /* FriendViewModel.swift */,
+				CA6BAD682712DE050025E2DF /* FriendViewModelFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		CA84585126A042DC001F9041 /* Models */ = {
@@ -200,6 +226,8 @@
 		CA923C6E269440D200D8169F /* clientServerVKontakteClone */ = {
 			isa = PBXGroup;
 			children = (
+				CA6BAD652712DD020025E2DF /* Factory */,
+				CA040BED2705C8BE00341B45 /* Adapter */,
 				CA923C6F269440D200D8169F /* AppDelegate.swift */,
 				CA93D2D826CDA2FE00043BEE /* NewsCells */,
 				CA1FB758269AD19A001AF136 /* ControllersAndCells */,
@@ -377,6 +405,7 @@
 				CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */,
 				CA84585326A042F8001F9041 /* Friends.swift in Sources */,
 				CA84584C26A0357A001F9041 /* PhotosViewController.swift in Sources */,
+				CA6BAD692712DE050025E2DF /* FriendViewModelFactory.swift in Sources */,
 				CA923C86269441E100D8169F /* Session.swift in Sources */,
 				CA84585726A05C3D001F9041 /* Photos.swift in Sources */,
 				CA84585926A05DC6001F9041 /* PhotoCell.swift in Sources */,
@@ -396,10 +425,13 @@
 				CA84585526A055BC001F9041 /* UserGroups.swift in Sources */,
 				CA84584E26A035A1001F9041 /* UserGroupsViewController.swift in Sources */,
 				CA84585B26A060E8001F9041 /* SearchingGroups.swift in Sources */,
+				CA040BEC27049DA200341B45 /* UIColorExtension.swift in Sources */,
 				CA84584A26A0355C001F9041 /* FriendsViewController.swift in Sources */,
+				CA6BAD672712DD480025E2DF /* FriendViewModel.swift in Sources */,
 				CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */,
 				CAD491BD26C0326900AC4009 /* News.swift in Sources */,
 				CAD491BF26C0343700AC4009 /* NewsViewController.swift in Sources */,
+				CA040BEF2705C96E00341B45 /* FriendsAdapter.swift in Sources */,
 				CA5701D426DB60AA00E639D5 /* UserAPIService.swift in Sources */,
 				CAA5D9A726B9C996002A2CBF /* RealtimeFirebaseDataModel.swift in Sources */,
 				CA148BA926B1E8A700648CFC /* DataBaseProtocol.swift in Sources */,
