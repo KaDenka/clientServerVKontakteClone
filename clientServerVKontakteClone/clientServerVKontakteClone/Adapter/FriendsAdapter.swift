@@ -7,14 +7,19 @@
 
 import Foundation
 
+
+
 class FriendsAdapter {
     
-    private let friendAPI = FriendsAPIService()
+    private let friendsAPIProxy = FriendsAPIServiceProxy(friendsAPI: FriendsAPIService())
     
     private var friendsList = [Friend]()
     
     func getFriendsList(completion: @escaping ([Friend]) -> (Void)) {
-        friendAPI.friendsListAPIRequest { /*[weak self]*/ friends in
+        
+        //friendAPI.friendsListAPIRequest { /*[weak self]*/ friends in
+        friendsAPIProxy.friendsListAPIRequest { /*[weak self]*/ (friends) in
+            
            // guard let self = self else { return }
            // self.friendsList = friends
             completion(friends)
