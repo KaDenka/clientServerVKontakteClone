@@ -18,6 +18,8 @@
 		CA1FB760269AE93F001AF136 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */; };
 		CA1FB762269AF898001AF136 /* GroupsSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */; };
 		CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */; };
+		CA3662FA2721546400BCD07A /* APIServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3662F92721546400BCD07A /* APIServiceInterface.swift */; };
+		CA3662FC2721549E00BCD07A /* FriendsAPIServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3662FB2721549E00BCD07A /* FriendsAPIServiceProxy.swift */; };
 		CA48BC8C26B9C384008614CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */; };
 		CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */; };
 		CA49605126CEA4200036DDCB /* InfoPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */; };
@@ -70,6 +72,8 @@
 		CA1FB75F269AE93F001AF136 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		CA1FB761269AF898001AF136 /* GroupsSearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsSearchAPIService.swift; sourceTree = "<group>"; };
 		CA2457EF26D7FC6D001002F1 /* FriendsOperationAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsOperationAPIService.swift; sourceTree = "<group>"; };
+		CA3662F92721546400BCD07A /* APIServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceInterface.swift; sourceTree = "<group>"; };
+		CA3662FB2721549E00BCD07A /* FriendsAPIServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIServiceProxy.swift; sourceTree = "<group>"; };
 		CA48BC8B26B9C384008614CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA49604E26CEA4200036DDCB /* InfoPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostTableViewCell.swift; sourceTree = "<group>"; };
 		CA49604F26CEA4200036DDCB /* InfoPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPostTableViewCell.xib; sourceTree = "<group>"; };
@@ -172,6 +176,15 @@
 			path = ControllersAndCells;
 			sourceTree = "<group>";
 		};
+		CA3662F82721544500BCD07A /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				CA3662F92721546400BCD07A /* APIServiceInterface.swift */,
+				CA3662FB2721549E00BCD07A /* FriendsAPIServiceProxy.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
 		CA5CA54526B0714400DB9F03 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 		CA923C6E269440D200D8169F /* clientServerVKontakteClone */ = {
 			isa = PBXGroup;
 			children = (
+				CA3662F82721544500BCD07A /* Proxy */,
 				CA6BAD652712DD020025E2DF /* Factory */,
 				CA040BED2705C8BE00341B45 /* Adapter */,
 				CA923C6F269440D200D8169F /* AppDelegate.swift */,
@@ -415,6 +429,7 @@
 				CA923C74269440D200D8169F /* AuthViewController.swift in Sources */,
 				CA2457F026D7FC6D001002F1 /* FriendsOperationAPIService.swift in Sources */,
 				CA5CA54926B0720B00DB9F03 /* FriendsDataBase.swift in Sources */,
+				CA3662FA2721546400BCD07A /* APIServiceInterface.swift in Sources */,
 				CA923C70269440D200D8169F /* AppDelegate.swift in Sources */,
 				CA49605026CEA4200036DDCB /* InfoPostTableViewCell.swift in Sources */,
 				CA923C72269440D200D8169F /* SceneDelegate.swift in Sources */,
@@ -440,6 +455,7 @@
 				CA1FB75E269AE91B001AF136 /* GroupsAPIService.swift in Sources */,
 				CA5701D626DB61E900E639D5 /* User.swift in Sources */,
 				CA1FB75C269AE8BF001AF136 /* FriendsAPIService.swift in Sources */,
+				CA3662FC2721549E00BCD07A /* FriendsAPIServiceProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

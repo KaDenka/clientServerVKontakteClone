@@ -9,7 +9,7 @@
 
 import Foundation
 
-class FriendsAPIService {
+class FriendsAPIService: APIServiceInterface {
     
     func friendsListAPIRequest(completion: @escaping ([Friend]) -> (Void)) {
         DispatchQueue.global().async {
